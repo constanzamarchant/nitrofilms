@@ -148,30 +148,30 @@
 
 		&__frame{
 		  	&--smallsquare{
-			grid-column: span 1;
-			grid-row: span 1;
-			position: relative;
-			overflow: hidden;	
+				grid-column: span 1;
+				grid-row: span 1;
+				position: relative;
+				overflow: hidden;	
 			}
 
 			&--bigsquare{
-			grid-column: span 2;
-			grid-row: span 2;	
+				grid-column: span 2;
+				grid-row: span 2;	
 			}
 
 			&--vertrect{
-	  		grid-column: span 1;
-			grid-row: span 2;
+		  		grid-column: span 1;
+				grid-row: span 2;
 			}
 
 	  		&--horect{
-	  		grid-column: span 2;
-			grid-row: span 1;
+		  		grid-column: span 2;
+				grid-row: span 1;
 			}
 
 			&--halfwidth{
-			grid-column: span 3;
-			grid-row: span 1;
+				grid-column: span 3;
+				grid-row: span 1;
 			}
 		}
 
@@ -181,7 +181,7 @@
 			padding-bottom: 1em;
 			padding-right: .5em;
 		    text-align: right;
-		    top: 0;
+		    top: 100%;
 		    right: 0;
 		    position: absolute;
 		    width: 100%;
@@ -189,9 +189,9 @@
 		    cursor: pointer;
 		    transition: transform 0.1s linear;
 
-		 //    &:hover{
-			// 	transform: translateY(-30px);
-			// }
+		    &:hover{
+				transform: translateY(-200px);
+			}
 		}
 
 		&__captiontext{
@@ -201,7 +201,11 @@
 			color: $white;
 		}
 
-		&__framelink{
+		&__link:hover {
+
+			& .main_container__caption {
+				transform: translateY(-100px);
+			}
 		}
 
 	// ABOUT
