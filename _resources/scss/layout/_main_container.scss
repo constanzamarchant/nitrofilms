@@ -5,7 +5,7 @@
 	}
 	
 	// WORK
-	&__grid{
+	&__masonry{
 		display: grid;
 		min-height:100vh;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -17,7 +17,6 @@
 		background-color:$dark-gray;
 		box-sizing:border-box;
 	}
-
 
 	&__frame{
 	  	&--smallsquare{
@@ -133,7 +132,7 @@
 
 	// WORK
 	.main_container{
-		&__grid{
+		&__masonry{
 		display: grid;
 		min-height:100vh;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -188,10 +187,6 @@
 		    height: 100%;
 		    cursor: pointer;
 		    transition: transform 0.1s linear;
-
-		    &:hover{
-				transform: translateY(-200px);
-			}
 		}
 
 		&__captiontext{
@@ -199,12 +194,12 @@
 			font-size: $x-small;
 			font-style: italic;
 			color: $white;
+			text-decoration: none;
 		}
 
 		&__link:hover {
-
 			& .main_container__caption {
-				transform: translateY(-100px);
+				transform: translateY(-80px);
 			}
 		}
 
