@@ -3,7 +3,8 @@
 		height: 100vh;
 		background-color: $gray;
 	}
-
+	
+	// WORK
 	&__grid{
 		display: grid;
 		min-height:100vh;
@@ -19,7 +20,7 @@
 
 
 	&__frame{
-	  	&--1x1{
+	  	&--smallsquare{
 		grid-column: span 2;
 		grid-row: span 2;
 		}
@@ -39,14 +40,13 @@
 		grid-row: span 2;
 		}
 
-		&--3x1{
-  		grid-column: span 2;
-		grid-row: span 2;
+		&--halfwidth{
+			grid-column: span 2;
+			grid-row: span 2;
 		}
 	}
 
 	// ABOUT
-
 	&__studio{
 		height: 50vh;
 		padding: 3rem 1.5rem;
@@ -82,7 +82,6 @@
 	}
 
 	// CONTACT
-
 	&__slidercontact{
 		height: 50vh;
 		background-color: $gray;
@@ -131,6 +130,8 @@
 // -----------------
 
 @media all and (min-width: 768px){
+
+	// WORK
 	.main_container{
 		&__grid{
 		display: grid;
@@ -146,34 +147,33 @@
 		}
 
 		&__frame{
-		  	&--1x1{
+		  	&--smallsquare{
 			grid-column: span 1;
 			grid-row: span 1;
 			}
 
-			&--2x2{
+			&--bigsquare{
 			grid-column: span 2;
 			grid-row: span 2;	
 			}
 
-			&--1x2{
+			&--vertrect{
 	  		grid-column: span 1;
 			grid-row: span 2;
 			}
 
-	  		&--2x1{
+	  		&--horect{
 	  		grid-column: span 2;
 			grid-row: span 1;
 			}
 
-			&--3x1{
-	  		grid-column: span 2;
-			grid-row: span 2;
+			&--halfwidth{
+			grid-column: span 3;
+			grid-row: span 1;
 			}
 		}
 
 	// ABOUT
-		
 		&__studio, &__slidercontact , &__heroproj{
 			height: 50vh;
 			background-color: $gray;
@@ -207,7 +207,6 @@
 		}
 
 		// CONTACT
-
 		&__contactinfo{
 			display: flex;
 			justify-content: space-between;
@@ -255,6 +254,51 @@
 			width: 50%;
 			padding:3em;
 			text-align: center;
+		}
+
+		&__creditslist{
+			list-style: none;
+		}
+
+		&__creditsitem{
+			font-weight: $medium;
+			font-style: $x-small;
+			color: $yellow;
+			font-style: italic;
+
+			&--info{
+			font-weight: $font-lighter;
+			color: $white;
+			}
+		}
+
+		&__overviewtitle{
+			font-weight: $font-bold;
+			text-transform: uppercase;
+			font-style: italic;
+			margin-bottom: 1em;
+		}
+
+		&__overviewtext{
+			font-weight: $font-lighter;
+			color: $white;
+			font-style: italic;
+			margin-bottom: 1em;
+		}
+
+		&__pagination{
+			background-color: $purple;
+			padding: 2rem 11.5rem;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__paglink{
+			color: $white;
+
+			&:hover{
+				color: $yellow;
+			}
 		}
 	}
 }

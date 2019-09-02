@@ -1,4 +1,4 @@
-body, h3, h4, h5, ul, li , p{
+body, h2, h3, h4, h5, ul, li , p{
 	margin: 0;
 	padding: 0;
 	font-family: $primary-font;
@@ -33,4 +33,12 @@ h4{
 	color: $yellow;
 	font-style: italic;
 	line-height: .8em;
+}
+
+h5{
+	font-weight: $font-bolder;
+	font-size: $medium;
+	text-transform: uppercase;
+	color: $white;
+	font-style: italic;
 }

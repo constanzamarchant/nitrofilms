@@ -20,15 +20,13 @@
 	font-size: $medium;
 	}
 
-	&__rights{
+	&__rightstext{
 	color: $white;
-	font-family: $font-lighter;
-	margin-top: 3em;
+	font-weight: $font-lighter;
 	}
 
 	&__socialist{
 	list-style: none;
-	margin-top: 3em;
 	}
 
 	&__socialicon{
@@ -64,9 +62,9 @@
 		font-size: $medium;
 		}
 
-		&__rights{
+		&__rightstext{
 		color: $white;
-		font-family: $font-lighter;
+		font-weigt: $font-lighter;
 		}
 
 		&__socialist{
