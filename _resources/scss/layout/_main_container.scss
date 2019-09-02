@@ -146,6 +146,8 @@
 		}
 
 		&__frame{
+			list-style: none;
+
 		  	&--smallsquare{
 				grid-column: span 1;
 				grid-row: span 1;
