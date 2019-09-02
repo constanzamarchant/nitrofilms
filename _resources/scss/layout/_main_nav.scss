@@ -1,0 +1,116 @@
+header{
+	background-color: $dark-gray;
+	padding: 2em;
+}
+
+.main_nav {
+	display: flex;
+	justify-content: space-between;
+
+	&__logo{
+	width: 100px;
+	}
+
+	&__openicon{
+		color: $white;
+	    font-size: $medium;
+	    background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__menu{
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 350px;
+		height: 100vh;
+		background-color: $purple;
+	    z-index: 1001;
+	    overflow: hidden;
+	    text-align: right;
+		-webkit-transition: -webkit-transform 250ms ease-in-out;
+		transition: transform 250ms ease-in-out;
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+		-moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+		-webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
+
+	&__closeicon{
+		position: absolute;
+	    color: #FCD61F;
+	    font-size: $large;
+	    top: 3em;
+	    left: 1em;
+	    background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__list {
+		display: block;
+		position: absolute;
+		text-align: left;
+		text-transform: uppercase;
+		top:30vh;
+		left: 2em;
+	}
+
+	&__item {
+		display: block;
+		line-height: 1em;
+		font-family: $primary-font;
+		font-weight: $font-bolder;
+		font-size: $x-large;
+		font-style: italic;
+	}
+
+	&__link{
+		text-decoration: none;
+		color: $white;
+		position: relative;
+
+		&:hover {
+			&:before {
+				content: '';
+				position: absolute;
+				width: 120px;
+				height: 20px;
+				background-color: $yellow;
+				right: -190px;
+				top: 10px;
+			}
+		}
+	}
+	
+	&__socialist{
+		list-style: none;
+		position: absolute;
+		bottom: 11em;
+		left: 2em;
+	}
+
+	&__socialitem{
+		display: inline-block;
+		padding: .2em;
+		font-size: $medium;
+	}
+
+	&__socialink{
+		color: $white;
+	}
+}
+
+.active {
+-webkit-transform: translateX(385px);
+-moz-transform: translateX(385px);
+-o-transform: translateX(385px);
+-ms-transform: translateX(385px);
+transform: translateX(385px);
+}
+
+@media (min-width: 768px){
+
+ 
+}
+

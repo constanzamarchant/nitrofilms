@@ -1,0 +1,260 @@
+.main_container{
+	&__hero{
+		height: 100vh;
+		background-color: $gray;
+	}
+
+	&__grid{
+		display: grid;
+		min-height:100vh;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+		grid-auto-rows:200px;
+		grid-auto-flow:row dense;
+		grid-gap: 5px;
+		padding: 5px;
+		background-color:$dark-gray;
+		box-sizing:border-box;
+	}
+
+
+	&__frame{
+	  	&--1x1{
+		grid-column: span 2;
+		grid-row: span 2;
+		}
+
+		&--2x2{
+		grid-column: span 2;
+		grid-row: span 2;	
+		}
+
+		&--1x2{
+  		grid-column: span 2;
+		grid-row: span 2;
+		}
+
+  		&--2x1{
+  		grid-column: span 2;
+		grid-row: span 2;
+		}
+
+		&--3x1{
+  		grid-column: span 2;
+		grid-row: span 2;
+		}
+	}
+
+	// ABOUT
+
+	&__studio{
+		height: 50vh;
+		padding: 3rem 1.5rem;
+		background-color: $gray;
+		text-align: center;
+	}
+
+	&__description{
+		font-size: $small;
+		color: $white;
+		font-style: italic;
+		font-weight: 300;
+	}
+
+	&__calltoaction{
+		background-color: $purple;
+		padding: 3rem 1.5rem;
+	}
+
+	&__break{
+		display: block;
+	}
+
+	&__textcall{
+		&:before {
+				content: '';
+				position: absolute;
+				width: 80px;
+				height: 20px;
+				background-color: $yellow;
+				right: 0;
+			}
+	}
+
+	// CONTACT
+
+	&__slidercontact{
+		height: 50vh;
+		background-color: $gray;
+	}
+
+	&__contactinfo{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 3rem 1.5rem;
+		background-color: $gray;
+		color: $white;
+		text-align: center;
+	}
+
+	&__hello, &__headquarters, &__representation{
+		width: 100%;
+	}
+
+	&__list{
+		list-style: none;
+	}
+
+	&__title{
+		font-weight: $font-bolder;
+		font-style: italic;
+		font-size: $small;
+		line-height: 3em;
+		color: $yellow;
+	}
+}
+
+.border_right{}
+.hidden{display: none;}
+.gray { background-color: rgba(0,0,0,0.1);}
+.tomato { background-color: Tomato; }
+.orange { background-color: Orange; }
+.dodgerBlue { background-color: DodgerBlue; }
+.mediumSeaGreen { background-color: MediumSeaGreen; }
+.gray { background-color: gray; }
+.slateBlue { background-color: SlateBlue; }
+.violet { background-color: Violet; }
+
+
+// Large Devices
+// -----------------
+
+@media all and (min-width: 768px){
+	.main_container{
+		&__grid{
+		display: grid;
+		min-height:100vh;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+		grid-auto-rows:200px;
+		grid-auto-flow:row dense;
+		grid-gap: 5px;
+		padding: 5px;
+		background-color:$dark-gray;
+		box-sizing:border-box;
+		}
+
+		&__frame{
+		  	&--1x1{
+			grid-column: span 1;
+			grid-row: span 1;
+			}
+
+			&--2x2{
+			grid-column: span 2;
+			grid-row: span 2;	
+			}
+
+			&--1x2{
+	  		grid-column: span 1;
+			grid-row: span 2;
+			}
+
+	  		&--2x1{
+	  		grid-column: span 2;
+			grid-row: span 1;
+			}
+
+			&--3x1{
+	  		grid-column: span 2;
+			grid-row: span 2;
+			}
+		}
+
+	// ABOUT
+		
+		&__studio, &__slidercontact , &__heroproj{
+			height: 50vh;
+			background-color: $gray;
+		}
+
+		&__studio{
+			padding: 5rem 15rem;
+		}
+
+		&__description{
+		font-size: $medium;
+		color: $white;
+		font-style: italic;
+		font-weight: 300;
+		}
+
+		&__calltoaction{
+			background-color: $purple;
+			padding: 5rem 11.5rem;
+		}
+
+		&__textcall{
+			&:before {
+					content: '';
+					position: absolute;
+					width: 120px;
+					height: 20px;
+					background-color: $yellow;
+					right: 0;
+				}
+		}
+
+		// CONTACT
+
+		&__contactinfo{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding: 5rem 11rem;
+			background-color: $gray;
+			color: $white;
+			text-align: center;
+		}
+
+		&__hello, &__headquarters, &__representation{
+			width: 33.3%;
+		}
+
+		&__title{
+			font-weight: $font-bolder;
+			font-style: italic;
+			font-size: $small;
+			line-height: 3em;
+			color: $yellow;
+		}
+
+		// PROJECT
+		&__nameproj{
+			background-color: $purple;
+			padding: 2rem 11.5rem;
+		}
+
+		&__titleproj{
+			text-align: center;
+
+			&--bold{
+				font-weight: $font-bolder;
+			}
+		}
+
+		&__descproj{
+			background-color: $gray;
+			color: $white;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__credits, &__overview{
+			width: 50%;
+			padding:3em;
+			text-align: center;
+		}
+	}
+}
