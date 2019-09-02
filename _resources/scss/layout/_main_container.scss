@@ -150,6 +150,8 @@
 		  	&--smallsquare{
 			grid-column: span 1;
 			grid-row: span 1;
+			position: relative;
+			overflow: hidden;	
 			}
 
 			&--bigsquare{
@@ -171,6 +173,35 @@
 			grid-column: span 3;
 			grid-row: span 1;
 			}
+		}
+
+		&__caption{
+			background-color: #5A25B7;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-right: .5em;
+		    text-align: right;
+		    top: 0;
+		    right: 0;
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    cursor: pointer;
+		    transition: transform 0.1s linear;
+
+		 //    &:hover{
+			// 	transform: translateY(-30px);
+			// }
+		}
+
+		&__captiontext{
+			font-weight: $font-light;
+			font-size: $x-small;
+			font-style: italic;
+			color: $white;
+		}
+
+		&__framelink{
 		}
 
 	// ABOUT

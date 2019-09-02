@@ -36,6 +36,14 @@ header{
 		-webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 	}
 
+	.active {
+	-webkit-transform: translateX(385px);
+	-moz-transform: translateX(385px);
+	-o-transform: translateX(385px);
+	-ms-transform: translateX(385px);
+	transform: translateX(385px);
+	}
+
 	&__closeicon{
 		position: absolute;
 	    color: #FCD61F;
@@ -99,14 +107,6 @@ header{
 	&__socialink{
 		color: $white;
 	}
-}
-
-.active {
--webkit-transform: translateX(385px);
--moz-transform: translateX(385px);
--o-transform: translateX(385px);
--ms-transform: translateX(385px);
-transform: translateX(385px);
 }
 
 @media (min-width: 768px){
