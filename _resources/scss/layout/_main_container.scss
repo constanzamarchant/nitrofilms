@@ -22,28 +22,69 @@
 	  	&--smallsquare{
 		grid-column: span 2;
 		grid-row: span 2;
+		position: relative;
+		overflow: visible;
 		}
 
-		&--2x2{
+		&--bigsquare{
 		grid-column: span 2;
 		grid-row: span 2;	
 		}
 
-		&--1x2{
+		&--vertrect{
   		grid-column: span 2;
 		grid-row: span 2;
 		}
 
-  		&--2x1{
+  		&--horect{
   		grid-column: span 2;
 		grid-row: span 2;
 		}
 
 		&--halfwidth{
-			grid-column: span 2;
-			grid-row: span 2;
+		grid-column: span 2;
+		grid-row: span 2;
 		}
 	}
+	
+	&__caption{
+		background-color: #5A25B7;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-right: 1em;
+	    text-align: right;
+	    top: 77%;
+	    right: 0;
+	    position: absolute;
+	    width: 100%;
+	    height: 15%;
+	    cursor: pointer;
+	    transition: transform 0.1s linear;
+	}
+
+	&__captiontext{
+		font-weight: $font-light;
+		font-size: $x-small;
+		font-style: italic;
+		color: $white;
+		text-decoration: none;
+		display: block;
+	}
+
+	&__captiontitle{
+		font-weight: $font-bolder;
+		font-size: $x-small;
+		text-transform: uppercase;
+		color: $white;
+		font-style: italic;
+	}
+
+	&__link:hover {
+		& .main_container__caption {
+			transform: translateY(-80px);
+		}
+	}
+
 
 	// ABOUT
 	&__studio{
@@ -110,6 +151,79 @@
 		font-size: $small;
 		line-height: 3em;
 		color: $yellow;
+	}
+
+	// PROJECT
+	&__nameproj{
+		background-color: $purple;
+		padding: 2rem 3.5rem;
+	}
+
+	&__titleproj{
+		text-align: center;
+
+		&--bold{
+			font-weight: $font-bolder;
+		}
+	}
+
+	&__descproj{
+		background-color: $gray;
+		color: $white;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__credits, &__overview{
+		margin-top: 1em;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__creditslist{
+		list-style: none;
+	}
+
+	&__creditsitem{
+		font-weight: $medium;
+		font-style: $x-small;
+		color: $yellow;
+		font-style: italic;
+
+		&--info{
+		font-weight: $font-lighter;
+		color: $white;
+		}
+	}
+
+	&__overviewtitle{
+		font-weight: $font-bold;
+		text-transform: uppercase;
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+
+	&__overviewtext{
+		font-weight: $font-lighter;
+		color: $white;
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+
+	&__pagination{
+		background-color: $purple;
+		padding: 2rem 1rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__paglink{
+		color: $white;
+
+		&:hover{
+			color: $yellow;
+		}
 	}
 }
 
@@ -199,6 +313,14 @@
 			text-decoration: none;
 		}
 
+		&__captiontitle{
+			font-weight: $font-bolder;
+			font-size: $x-small;
+			text-transform: uppercase;
+			color: $white;
+			font-style: italic;
+		}
+
 		&__link:hover {
 			& .main_container__caption {
 				transform: translateY(-80px);
@@ -271,7 +393,7 @@
 			text-align: center;
 
 			&--bold{
-				font-weight: $font-bolder;
+				font-weight: $font-lighter;
 			}
 		}
 
@@ -280,11 +402,12 @@
 			color: $white;
 			display: flex;
 			justify-content: space-between;
+			flex-direction: row;
 		}
 
 		&__credits, &__overview{
 			width: 50%;
-			padding:3em;
+			padding:2em;
 			text-align: center;
 		}
 
