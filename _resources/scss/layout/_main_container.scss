@@ -28,17 +28,23 @@
 
 		&--bigsquare{
 		grid-column: span 2;
-		grid-row: span 2;	
+		grid-row: span 2;
+		position: relative;
+		overflow: visible;	
 		}
 
 		&--vertrect{
   		grid-column: span 2;
 		grid-row: span 2;
+		position: relative;
+		overflow: visible;
 		}
 
   		&--horect{
   		grid-column: span 2;
 		grid-row: span 2;
+		position: relative;
+		overflow: visible;
 		}
 
 		&--halfwidth{
@@ -271,17 +277,23 @@
 
 			&--bigsquare{
 				grid-column: span 2;
-				grid-row: span 2;	
+				grid-row: span 2;
+				position: relative;
+				overflow: hidden;	
 			}
 
 			&--vertrect{
 		  		grid-column: span 1;
 				grid-row: span 2;
+				position: relative;
+				overflow: hidden;
 			}
 
 	  		&--horect{
 		  		grid-column: span 2;
 				grid-row: span 1;
+				position: relative;
+				overflow: hidden;
 			}
 
 			&--halfwidth{
@@ -329,12 +341,12 @@
 
 	// ABOUT
 		&__studio, &__slidercontact , &__heroproj{
-			height: 50vh;
 			background-color: $gray;
 		}
 
 		&__studio{
-			padding: 5rem 15rem;
+			padding: 0 15rem;
+			padding-top: 7em;
 		}
 
 		&__description{
