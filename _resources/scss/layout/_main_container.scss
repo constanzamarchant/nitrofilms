@@ -52,6 +52,10 @@
 		grid-row: span 2;
 		}
 	}
+
+	&__thumb{
+
+	}
 	
 	&__caption{
 		background-color: #5A25B7;
@@ -256,13 +260,17 @@
 		display: grid;
 		min-height:100vh;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-rows: inherit;
 		grid-auto-rows:200px;
 		grid-auto-flow:row dense;
 		grid-gap: 5px;
 		padding: 5px;
 		background-color:$dark-gray;
 		box-sizing:border-box;
+		}
+
+		&__thumb{
+			object-fit: cover;
 		}
 
 		&__frame{
